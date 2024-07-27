@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="utf-8" />
+    <title>צור קשר | Liats' paintings</title>
+    <meta name="description" content="צור קשר" />
+    <meta name="keywords" content="paintings, oil colors, ציור, הזמנה אישית, קנבס, ציורים, שיתוף פעולה, צור קשר" />
+    <meta name="author" content="רוני שמשוני ועמית ברכה" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link href="styles/StyleSheet2.css" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="jScripts/JavaScript.js" defer></script>
+    <style>
+        .menu-item {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            opacity: 0.5;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            margin: 5px;
+        }
+        .menu-item.selected {
+            opacity: 1.0;
+        }
+        .hidden {
+            display: none;
+        }
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .menu-section {
+            margin-bottom: 20px;
+        }
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+        .popup h3 {
+            color: black;
+        }
+        .popup p {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="main-navigation">
+            <nav role="navigation" class="background" aria-label="תפריט ניווט ראשי">
+                <ul>
+                    <li><a href="aboutliat.html">קצת עלינו</a></li>
+                    <li>
+                        <a href="#">גלריות ציורים ↓</a>
+                        <ul>
+                            <li><a href="galleryanimals.html">גלריית ציורי חיות</a></li>
+                            <li><a href="gallerynature.html">גלריית ציורי טבע</a></li>
+                            <li><a href="gallerywomen.html">גלריית ציורי נשים</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contactUs.html">צרו קשר</a></li>
+                    <li><a href="about.html">אודות</a></li>
+                    <li><a href="siteMap.html">מפת אתר</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br />
+    <article>
+        <div class="right">
+            <p class="textbreadcrumbs">
+                <a href="index.html" class="kishor">דף הבית</a>
+            </p>
+            <p class="textbreadcrumbs">>></p>
+            <p class="textbreadcrumbs">
+                <a href="contactUs.html" class="kishor">צור קשר</a>
+            </p>
+        </div>
+    </article>
+    <h1>רכישת ציורים</h1>
+    <form id="interactiveForm" oninput="updateForm()" onsubmit="submitForm(event)">
+        <div>
+            <label for="name">שם מלא:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-container">
+            <div class="choice-menu">
+                <h3>בחירת ציורים</h3>
+                <h4>קטגוריות</h4>
+                <input type="radio" id="category1" name="category" value="חיות" data-img="animal">
+                <label for="category1">חיות</label><br>
+                <img id="1" src="images/turtle.jpg">
+                <img id="2" src="images/deer.jpg">
+                <img id="7" src="images/bigdeer.jpg">
+                <br>
+                <input type="radio" id="category2" name="category" value="טבע" data-img="nature">
+                <label for="category2">טבע</label><br>
+                <img id="3" src="images/paradise.jpg">
+                <img src="images/sunset.jpg">
+                <img id="4" src="images/pinkflowers.jpg">
+                <img id="5" src="images/redflowers.jpg">
+                <br>
+                <input type="radio" id="category3" name="category" value="נשים" data-img="women">
+                <label for="category3">נשים</label><br>
+                <img id="8" src="images/h2O.jpg">
+                <img id="9" src="images/momandchild.jpg">
+                <img id="10" src="images/womeningreensea.jpg">
+                <img id="11" src="images/womensinthepool.jpg">
+                <img id="12" src="images/shirjumping.jpg">
+                <br>
+                <h4>אפשרויות נוספות</h4>
+                <input type="checkbox" id="option1" name="option" value="מסגרת" data-img="frame">
+                <label for="option1">מסגרת</label><br>
+                <input type="checkbox" id="option2" name="option" value="הדפסה על קנבס" data-img="canvas">
+                <label for="option2">הדפסה על קנבס</label><br>
+            </div>
+            <div class="menu">
+                <h3>תמונות</h3>
+                
+                <div class="menu-section">
+                    <img src="images/animal.jpg" alt="חיות" class="menu-item hidden" data-item="animal">
+                    <img src="images/nature.jpg" alt="טבע" class="menu-item hidden" data-item="nature">
+                    <img src="images/women.jpg" alt="נשים" class="menu-item hidden" data-item="women">
+                    <img src="images/frame.jpg" alt="מסגרת" class="menu-item" data-item="frame">
+                    <img src="images/canvas.jpg" alt="הדפסה על קנבס" class="menu-item" data-item="canvas">
+                </div>
+            </div>
+        </div>
+        <button type="submit" id="submitButton" disabled>אישור</button>
+    </form>
+    <div id="feedback"></div>
+    <div class="popup" id="popup">
+        <h3>אישור</h3>
+        <p id="popupContent"></p>
+        <button onclick="closePopup()">סגור</button>
+    </div>
+</body>
+</html>

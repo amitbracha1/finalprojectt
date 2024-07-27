@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="utf-8" />
+    <title>גלריית ציורי טבע | Liats' paintings</title>
+    <meta name="description" content="דף הבית" />
+    <meta name="keywords" content="nature paintings, Landscape paintings, paintings, oil colors, ציור, הזמנה אישית, קנבס, ציורים" />
+    <meta name="author" content="רוני שמשוני ועמית ברכה" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link href="styles/StyleSheet2.css" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+
+    <link rel="icon" href="images/logoliat.png" sizes="12x12" type="image/png">
+</head>
+<body>
+    <header>
+        <div id="main-navigation">
+            <nav role="navigation" class="background" aria-label="תפריט ניווט ראשי">
+                <ul>
+                    <li>
+                     
+                    </li>
+                    <li><a href="aboutliat.html">קצת עלינו</a></li>
+                    <li>
+                        <a href="#">גלריות ציורים ↓</a>
+                        <ul>
+                            <li><a href="galleryanimals.html">גלריית ציורי חיות</a></li>
+                            <li><a href="gallerynature.html">גלריית ציורי טבע</a></li>
+                            <li><a href="gallerywomen.html">גלריית ציורי נשים</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contactUs.html">צרו קשר</a></li>
+                    <li><a href="about.html">אודות</a></li>
+                    <li><a href="siteMap.html">מפת אתר</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br />
+    <!-- פירורי לחם -->
+    <article>
+        <div class="right">
+            <p class="textbreadcrumbs">
+                <a href="index.html" class="kishor">דף הבית</a>
+            </p>
+            <p class="textbreadcrumbs">>></p>
+            <p class="textbreadcrumbs">
+                <a href="gallerynature.html" class="kishor">גלרית ציורי טבע</a>
+            </p>
+        </div>
+    </article>
+
+    <h1>ציורי טבע</h1>
+    <h2>
+        היופי הדומם גורם לצופה לשקוע בתוכו, <br />
+        ולדמיין את עצמו בתוכו
+    </h2>
+    <br />
+
+    <div class="container">
+        <div class="mySlides">
+            <div class="numbertext">6 / 1</div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <img src="images/beach.jpg" alt="ציור של חוף ים">
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">6 / 2</div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <img src="images/pinkflowers.jpg" alt="ציור של פרחים ורודים">
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">6 / 3</div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <img src="images/paradise.jpg" alt="ציור של אי בודד">
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">6 / 4</div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <img src="images/redflowers.jpg" alt="ציור של פרחים אדומים">
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">6 / 5</div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <img src="images/sunset.jpg" alt="ציור של שקיעה">
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">6 / 6</div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <img src="images/womeningreensea.jpg" alt="ציור של אישה באגם">
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="images/beach.jpg" onclick="currentSlide(1)" alt="שפת החוף - 40X60 סנטימטר">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/pinkflowers.jpg" onclick="currentSlide(2)" alt="עציץ עם פריחה ורודה - 24X30 סנטימטר">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/paradise.jpg" onclick="currentSlide(3)" alt="אי בודד - 30X30 סנטימטר">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/redflowers.jpg" onclick="currentSlide(4)" alt="זר צבעונים באגרטל - 30X30 סנטימטר">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/sunset.jpg" onclick="currentSlide(5)" alt="שלווה בשקיעה - 40X60 סנטימטר">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/womeningreensea.jpg" onclick="currentSlide(6)" alt="אישה באגם - 30X40 סנטימטר">
+            </div>
+        </div>
+    </div>
+
+    <!-- פונקציית הגלריה -->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("demo");
+            let captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+
+    <footer>
+        <hr />
+        <p id="liatpaintings">©️ כל הזכויות שמורות לצוות High tech Womens paintings</p>
+       
+        </a>
+    </footer>
+</body>
+</html>

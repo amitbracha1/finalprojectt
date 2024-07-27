@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="utf-8" />
+    <title>קצת עליי | Liats' paintings</title>
+    <meta name="description" content="קצת עלינו" />
+    <meta name="keywords" content="paintings, oil colors, change your life, מהייטק לציור, שינויים בחיים, ציור, הזמנה אישית, קנבס, ציורים" />
+    <meta name="author" content="רוני שמשוני ועמית ברכה" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link href="styles/StyleSheet2.css" rel="stylesheet" />
+    
+    <!-- JS -->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+    <script src="jScripts/JavaScript.js"></script>
+
+    <link rel="icon" href="images/logoliat.png" sizes="12xp" type="image/png">
+</head>
+
+<body>
+    <header>
+        <!-- הגדרת תפריט עליון -->
+        <div id="main-navigation">
+            <nav role="navigation" class="background" aria-label="תפריט ניווט ראשי">
+                <ul>
+                    <li>
+            
+                        </a>
+                    </li>
+                    <li><a href="aboutliat.html">קצת עלינו</a></li>
+                    <li>
+                        <a href="#">גלריות ציורים ↓</a>
+                        <ul>
+                            <li><a href="galleryanimals.html">גלריית ציורי חיות</a></li>
+                            <li><a href="gallerynature.html">גלריית ציורי טבע</a></li>
+                            <li><a href="gallerywomen.html">גלריית ציורי נשים</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contactUs.html">צרו קשר</a></li>
+                    <li><a href="about.html">אודות</a></li>
+                    <li><a href="siteMap.html">מפת אתר</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br />
+    <!-- פירורי לחם -->
+    <article>
+        <div class="right">
+            <p class="textbreadcrumbs">
+                <a href="index.html" class="kishor">דף הבית</a>
+            </p>
+            <p class="textbreadcrumbs">>></p>
+            <p class="textbreadcrumbs">
+                <a href="aboutliat.html" class="kishor">קצת עליי</a>
+            </p>
+        </div>
+    </article>
+
+    <article>
+        <h1><b>אז איך הכל התחיל?</b></h1>
+        <div id="sipurliat">
+            <p>
+                נשים רבות שעובדות סביב השעון מנסות למצוא זמן גם לתחביבים.
+                אמא של חברתנו הטובה, אשת קריירה גדולה, סמנכ״לית בחברת הייטק מוכרת החליטה שהיא מפנה זמן
+                גם לתחביבים.
+                חשבנו לקחת את הרעיון האישי שלה צעד אחד קדימה ולהקים אתר השראה לעוד נשים שרוצות לבטא את האומנות שלהן.
+            </p>
+        </div>
+        <div id="changeliat">
+            <p>לחצו על התמונה מתחת כדי לראות את השינוי שעשיתי ↓</p>
+        </div>
+        <div id="picturework">
+            <img id="momworking" onclick="changeImage()" src="images/momworking.jpg" alt="ליאת עובדת ומרצה בפני אנשים">
+            <script>
+                function changeImage() {
+                    var image = document.getElementById('momworking');
+                    if (image.src.match("momsmiling")) {
+                        image.src = "images/momworking.jpg";
+                        image.alt = "ליאת עובדת ומרצה בפני אנשים";
+                    } else {
+                        image.src = "images/momsmiling.jpg";
+                        image.alt = "ליאת מציירת";
+                    }
+                }
+            </script>
+        </div>
+        <div id="aboutpainting">
+            <p>
+                החלום הגדול שלי מאז ומעולם היה לצייר, תחביב שדורש זמן רב ותשומת לב,
+                שלא היו לי קודם. כשהתחלתי לצייר הבנתי שהציור בשבילי הוא מנוחה לנפש והדרך הטובה ביותר להירגע.
+                החלטתי להתמקד בנשים ומים כי רציתי להציג נשים שנהנות מהחיים, נופשות, שוחות, רוקדות.
+                אני מאד אוהבת לצייר בצבעי שמן כי לשמן יש חיים משלו, הצבע נראה אחרת בכל נקודת זמן והשכבות השונות נותנות ממדים שלא חשבתי עליהם מראש.
+                <br />
+                <b>מקווה שתהנו מהציורים ♥</b>
+            </p>
+        </div>
+        <div class="music">
+            <p>
+                נ.ב<br />
+                אין כמו לצייר בזמן שמאזינים לשירים שמרגיעים אתכם,<br />
+                צירפתי את השירים שאני אוהבת לשמוע כשאני מציירת ♪<br />
+            </p>
+            <div id="song">
+                <iframe width="420" height="315" src="https://www.youtube.com/watch?v=bHi-1Ekk3KE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <hr />
+        <p id="liatpaintings">©️ כל הזכויות שמורות לצוות High tech Womens paintings</p>
+   
+        </a>
+    </footer>
+</body>
+</html>
